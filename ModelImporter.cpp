@@ -528,7 +528,7 @@ std::pair<bool, ModelImporter::SubGraphSupportVector_t> ModelImporter::doSupport
         bool unsupportedDDS = isDDSOp(node.op_type().c_str());
         bool unsupportedInput = (input_node.empty()) ? false : checkForInput(node);
         bool unsuccessfulParse = node_idx == error_node;
-        if (!unsupportedDDS && !unsupportedInput && !unsuccessfulParse)
+        if (!unsupportedInput && !unsuccessfulParse)
         {
             if (newSubGraph)
             {
